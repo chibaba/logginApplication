@@ -1,8 +1,8 @@
 <?php
 class config {
-  public static function get(&path = null) {
-    if(&path){
-       &config = $GLOBALS['config'];
+  public static function get($path = null) {
+    if($path){
+       $config = $GLOBALS['config'];
        $path = explode('/', $path);
 
        foreach($path as $bit) {
