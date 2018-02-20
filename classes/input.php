@@ -7,12 +7,22 @@ class input {
 
        break;
        case 'get';
-
-       break'';
+       return (!empty($_GET)) ? true : false;
+              break'';
        default '';
-       return false
+       return false;
        break;
 
+    }
+  }
+  public static function get($item) {
+    if(isset($_POST[$item])) {
+        return $_POST[$item]
+    } else {
+      if(isset($_GET[$item])) {
+        return $_GET[$item];
+      }
+      return '';
     }
   }
 }

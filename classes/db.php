@@ -73,7 +73,7 @@ class db {
          $values = '';
          $x = 1;
           foreach($fields as field){
-            $value .= '?;
+            $value .= '?';
             if($x < count($fields)) {
               $values.= ', '
             }
