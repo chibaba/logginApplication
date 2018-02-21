@@ -41,13 +41,14 @@ if(Input::exists()) {
           'password' => Hash::make(Input::get('password'), $salt),
           'salt' => '$salt',
           'name' => Input::get('name'),
-          'joined' => date('Y-m-d h:i:s'),
+          'joined' => date('Y-m-d H:i:s'),
           'group' => 1
 
         ))
         Session::flash('home', 'You have been registered and can now loggin');
-        header('Location: index.php');
-    } catch (Exception $e){
+         //how to redirect
+         Redirect::to(404);
+      } catch (Exception $e){
      die(e->getMessage());
     }
    //session::flash('success', 'You registered successfully!')
